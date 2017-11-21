@@ -20,6 +20,7 @@
             echo $this->Form->control('name');
             echo $this->Form->control('description');
             echo $this->Form->control('duration');
+            echo $this->Form->control('release_date',[ 'minYear' => 1997, 'maxYear' => 2020 ])
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
