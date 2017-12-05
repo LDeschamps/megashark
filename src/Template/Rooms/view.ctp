@@ -37,4 +37,14 @@
             <td><?= h($room->modified) ?></td>
         </tr>
     </table>
+    <div>
+        <ul>
+            <?php foreach($showtimes as $key=>$showtime)
+            {
+                echo ($showtime->movie->name.' ');
+                echo ($showtime->start.' ');
+                
+            }; ?>
+        </ul>
+    </div>
 </div>
