@@ -37,14 +37,29 @@
             <td><?= h($room->modified) ?></td>
         </tr>
     </table>
-    <div>
-        <ul>
-            <?php foreach($showtimes as $key=>$showtime)
-            {
-                echo ($showtime->movie->name.' ');
-                echo ($showtime->start.' ');
-                
-            }; ?>
-        </ul>
-    </div>
+   
+</div>
+<div class="rooms view large-9 medium-8 columns content">
+    <h3>Planning de la Salle</h3>
+    <table class="horizontal-table">
+        <tr>
+            <td>Lundi</td>
+            <td>Mardi</td>
+            <td>Mercredi</td>
+            <td>Jeudi</td>
+            <td>Vendredi</td>
+            <td>Samedi</td>
+            <td>Dimanche</td>
+        </tr>
+        <?php foreach($showtimes as $key=>$showtime) ?>
+        <tr>
+            <td><?= echo ($showtime->movie->name.' '->where)></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 </div>
