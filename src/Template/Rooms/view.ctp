@@ -53,13 +53,12 @@
         </tr>
         <?php foreach($showtimes as $key=>$showtime) ?>
         <tr>
-            <td><?= echo ($showtime->movie->name.' '->where)></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><?php 
+                    echo ($showtime->movie->name.' ');
+                    echo ($showtime->start->format('H:i'));
+                    echo ('-'.$showtime->end->format('H:i'))
+                ?>
+            </td>
         </tr>
     </table>
 </div>
