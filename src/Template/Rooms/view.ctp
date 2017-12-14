@@ -51,14 +51,19 @@
             <td>Samedi</td>
             <td>Dimanche</td>
         </tr>
-        <?php foreach($showtimes as $key=>$showtime) ?>
         <tr>
+        <?php for($i=1;$i<7;$i++): ?> 
             <td><?php 
-                    echo ($showtime->movie->name.' ');
-                    echo ($showtime->start->format('H:i'));
-                    echo ('-'.$showtime->end->format('H:i'))
+                    if(isset($collection[$i])){
+                        foreach($collection[$i] as $key=>$showtime){ 
+                            echo ($showtime->movie->name.' ');
+                            echo ($showtime->start->format('H:i'));
+                            echo ('-'.$showtime->end->format('H:i'));
+                        }
+                    }
                 ?>
             </td>
+        <?php endfor; ?>
         </tr>
     </table>
 </div>
